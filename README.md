@@ -1,5 +1,5 @@
-<h1 align="center">Padrões de Projeto </h1>
-<p align="center"> Repositório refrente a matéria de Programação avançada</p>
+<h1 align="center">Padrões de Projeto - Aluguel de airsoft</h1>
+<p align="center"> Repositório refrente ao sistema de aluguel de armas de airsoft utilizando os padrões de projetos apresentados em sala de aula</p>
 <h1>👨🏽‍🏫 Professor da matéria</h1>
 <p>  • Layse Santos Souza</p>
 <h1>👨‍💻 Estudantes</h1>
