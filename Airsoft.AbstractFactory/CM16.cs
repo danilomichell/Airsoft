@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Airsoft.AbstractFactory
 {
-     class Program
+    internal class CM16: AssaultRifle
     {
-        static void Main()
+        public string exibirInfoAssaultRifle()
         {
-          new Client().Main();
+            return "Nome: CM16 \nTipo: Assault Rifle \nFábrica: G&G \nPreço: R$70 \nAno: 2015";
         }
     }
 }

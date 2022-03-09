@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Airsoft.AbstractFactory
 {
-     class Program
+    internal class GTP9: Pistola
     {
-        static void Main()
+        public string exibirInfoPistola()
         {
-          new Client().Main();
+            return "Nome: GTP9 \nTipo: Pistola \nFábrica: G&G \nPreço: R$30 \nAno: 2019";
         }
+
     }
 }

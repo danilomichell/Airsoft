@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Airsoft.AbstractFactory
 {
-     class Program
+     class M4A1 : Rifle
     {
-        static void Main()
+        public string exibirInfoRifle()
         {
-          new Client().Main();
+            return "Nome: M4A1 \nTipo: Rifle \nFábrica: G&G \nPreço: R$50 \nAno: 2018";
         }
     }
 }

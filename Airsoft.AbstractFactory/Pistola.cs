@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Airsoft.AbstractFactory
 {
-     class Program
+    public interface Pistola
     {
-        static void Main()
-        {
-          new Client().Main();
-        }
+        public string exibirInfoPistola();
     }
 }

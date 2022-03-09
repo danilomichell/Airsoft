@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Airsoft.AbstractFactory
 {
-     class Program
+    public interface FabricaArmas
     {
-        static void Main()
-        {
-          new Client().Main();
-        }
+        public Pistola CriarPistola();
+        public Rifle CriarRifle();
+        public AssaultRifle CriarAssaultRifle();
     }
 }
