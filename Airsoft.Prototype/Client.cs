@@ -1,6 +1,4 @@
-﻿using Airsoft.Prototype.ArmasEnidades;
-using Airsoft.Prototype.Fabricas;
-using Airsoft.Prototype.Interfaces;
+﻿using Airsoft.Prototype.Fabricas;
 
 namespace Airsoft.Prototype
 {
@@ -8,25 +6,30 @@ namespace Airsoft.Prototype
     {
         public void Main()
         {
-            ClientMethod(new FabricaGG());
+            ClientMethod(new FabricaArmas());
         }
 
         public void ClientMethod(FabricaArmas fabrica)
         {
 
             var prodA = new FabricaArmas() {Nome = "G&G"};
-            var pistola = FabricaArmas.CriarPistola("GTP9", "Pistola", prodA, 70, DateTime.Now);
+            var pistola = FabricaArmas.CriarPistola("GTP9", prodA, 70, DateTime.Now);
 
-            Console.WriteLine(pistola.ExibirInfo());
-            Console.WriteLine();
-
+            Console.WriteLine(pistola.ExibirInfo() + "\n");
             
-            var rifle = FabricaArmas.CriarRifle("GTP9", "Rifle", prodA, 70, DateTime.Now);       
+            var rifle = FabricaArmas.CriarRifle("M4A1", prodA, 70, DateTime.Now);       
 
-            Console.WriteLine(rifle.ExibirInfo());
-            Console.WriteLine();
+            Console.WriteLine(rifle.ExibirInfo() + "\n");
 
             rifle.DeepCopy();
+
+            var assaultRifle = FabricaArmas.CriarAssaultRifle("CM16", prodA, 70, DateTime.Now);
+
+            Console.WriteLine(assaultRifle.ExibirInfo() + "\n");
+
+            var assaultShallow = assaultRifle.ShallowCopy();
+
+            Console.WriteLine(assaultShallow.ExibirInfo() + "\n");
         }
     }
 }

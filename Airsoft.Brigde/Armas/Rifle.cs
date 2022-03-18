@@ -1,11 +1,6 @@
-﻿using Airsoft.Prototype.Fabricas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Prototype.Interfaces
+namespace Airsoft.Bridge.Armas
 {
     public class Rifle : Armas
     {

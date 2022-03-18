@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Airsoft.Prototype.Fabricas
+namespace Airsoft.Brigde.Armas
 {
-    public class FabricaGG : FabricaArmas
-    { 
+    public interface IArmas
+    {
+        public string ExibirInfo();
     }
 }
