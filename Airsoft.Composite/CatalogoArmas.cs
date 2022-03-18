@@ -6,24 +6,51 @@ using System.Threading.Tasks;
 
 namespace Airsoft.Composite
 {
-    public class CatalogoArmas
+    public class NotaAluguel
     {
-        public int Count { get; set; }
-        public bool First { get; set; }
+        private int count = 0; 
+        public NotaAluguel? Primeiro { get; set; }
         public ArmaAirsoft? Item { get; set; }
-        public ArmaAirsoft? Son { get; set; }
+        public NotaAluguel? Filho { get; set; }
 
-        public void AddItem(ArmaAirsoft rifle)
+        private NotaAluguel criarItem(ArmaAirsoft item)
         {
-            if (Count == 0)
+            NotaAluguel novoItem = new NotaAluguel();
+            novoItem.Item = item;
+            return novoItem;
+        }
+
+        public void AddItem(NotaAluguel primeiro, ArmaAirsoft newGun)
+        {
+            if (count == 0)
             {
-                First = true;
-                Item = rifle;
+                Primeiro = criarItem(newGun);
+                Item = newGun;
+                count++;
+                
             }
             else
             {
-                Son = rifle;
+                if (primeiro.Filho is null)
+                {
+                    primeiro.Filho = criarItem(newGun);
+                }
+                else
+                {
+                    AddItem(primeiro.Filho,newGun);
+                }
+            }
+        }
 
+        public void RemoverItem(NotaAluguel item1,ArmaAirsoft item)
+        {
+            if (Primeiro.Item == item)
+            {
+                Primeiro = Primeiro.Filho;
+            }
+            else
+            {
+                RemoverItem(item1, item);
             }
         }
 
