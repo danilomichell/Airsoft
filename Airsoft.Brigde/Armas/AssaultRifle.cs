@@ -1,11 +1,11 @@
-﻿using Airsoft.Prototype.Fabricas;
+﻿using  Airsoft.Bridge.Fabricas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Airsoft.Prototype.Interfaces
+namespace Airsoft.Bridge.Armas
 {
     public class AssaultRifle : Armas
     {

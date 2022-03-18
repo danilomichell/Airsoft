@@ -1,7 +1,7 @@
-﻿using Airsoft.Prototype.Fabricas;
-using Airsoft.Prototype.Interfaces;
+﻿using Airsoft.Bridge.Armas;
+using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Prototype.ArmasEnidades
+namespace Airsoft.Bridge.ArmasEnidades
 {
     public class CM16 : AssaultRifle
     {

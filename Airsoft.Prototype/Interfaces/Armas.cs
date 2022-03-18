@@ -28,6 +28,7 @@ namespace Airsoft.Prototype.Interfaces
 
         public Armas ShallowCopy()
         {
+            Console.WriteLine("Aque está a copia(Shallow): ");
             return (Armas)this.MemberwiseClone();
         }
 
@@ -39,7 +40,7 @@ namespace Airsoft.Prototype.Interfaces
             clone.Ano = Ano;
             clone.Preco = Preco;
             clone.Fabrica = new FabricaArmas() { Nome = Fabrica.Nome };
-            Console.WriteLine("Aque está a copia: ");
+            Console.WriteLine("Aque está a copia(Deep): ");
             Console.WriteLine(clone.ExibirInfo() + "\n");
             return clone;
         }
