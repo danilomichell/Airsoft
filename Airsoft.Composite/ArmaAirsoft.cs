@@ -1,5 +1,5 @@
 ﻿namespace Airsoft.Composite;
-
+#nullable disable
 public class ArmaAirsoft
 {
     public string Nome { get; set; }

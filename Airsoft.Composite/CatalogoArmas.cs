@@ -2,38 +2,48 @@
 
 public class NotaAluguel
 {
-    private int count;
+    private int _count;
     public NotaAluguel? Primeiro { get; set; }
     public ArmaAirsoft? Item { get; set; }
     public NotaAluguel? Filho { get; set; }
 
-    private NotaAluguel criarItem(ArmaAirsoft item)
+    private NotaAluguel CriarItem(ArmaAirsoft item)
     {
-        var novoItem = new NotaAluguel();
-        novoItem.Item = item;
+        var novoItem = new NotaAluguel
+        {
+            Item = item
+        };
         return novoItem;
     }
 
     public void AddItem(NotaAluguel primeiro, ArmaAirsoft newGun)
     {
-        if (count == 0)
+        while (true)
         {
-            Primeiro = criarItem(newGun);
-            Item = newGun;
-            count++;
-        }
-        else
-        {
-            if (primeiro.Filho is null)
-                primeiro.Filho = criarItem(newGun);
+            if (_count == 0)
+            {
+                Primeiro = CriarItem(newGun);
+                Item = newGun;
+                _count++;
+            }
             else
-                AddItem(primeiro.Filho, newGun);
+            {
+                if (primeiro.Filho is null)
+                    primeiro.Filho = CriarItem(newGun);
+                else
+                {
+                    primeiro = primeiro.Filho;
+                    continue;
+                }
+            }
+
+            break;
         }
     }
 
     public void RemoverItem(NotaAluguel item1, ArmaAirsoft item)
     {
-        if (Primeiro.Item == item)
+        if (Primeiro!.Item == item)
             Primeiro = Primeiro.Filho;
         else
             RemoverItem(item1, item);
