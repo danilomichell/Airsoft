@@ -29,7 +29,9 @@ public class NotaAluguel
             else
             {
                 if (primeiro.Filho is null)
+                {
                     primeiro.Filho = CriarItem(newGun);
+                }
                 else
                 {
                     primeiro = primeiro.Filho;
