@@ -2,7 +2,7 @@
 
 namespace Airsoft.Prototype;
 
-internal class Client
+public class Client
 {
     public void Main()
     {

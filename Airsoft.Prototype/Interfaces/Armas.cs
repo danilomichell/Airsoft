@@ -1,5 +1,4 @@
-﻿#pragma warning disable CS8618
-using Airsoft.Prototype.Fabricas;
+﻿using Airsoft.Prototype.Fabricas;
 
 namespace Airsoft.Prototype.Interfaces;
 
