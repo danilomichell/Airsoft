@@ -1,19 +1,19 @@
 ﻿namespace Airsoft.AbstractFactory;
 
-public class FabricaGG : FabricaArmas
+public class FabricaGg : IFabricaArmas
 {
-    public Rifle CriarRifle()
+    public IRifle CriarRifle()
     {
         return new M4A1();
     }
 
-    public Pistola CriarPistola()
+    public IPistola CriarPistola()
     {
-        return new GTP9();
+        return new Gtp9();
     }
 
-    public AssaultRifle CriarAssaultRifle()
+    public IAssaultRifle CriarAssaultRifle()
     {
-        return new CM16();
+        return new Cm16();
     }
 }

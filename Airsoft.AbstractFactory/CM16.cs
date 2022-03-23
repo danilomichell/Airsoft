@@ -1,8 +1,8 @@
 ﻿namespace Airsoft.AbstractFactory;
 
-internal class CM16 : AssaultRifle
+internal class Cm16 : IAssaultRifle
 {
-    public string exibirInfoAssaultRifle()
+    public string ExibirInfoAssaultRifle()
     {
         return "Nome: CM16 \nTipo: Assault Rifle \nFábrica: G&G \nPreço: R$70 \nAno: 2015";
     }

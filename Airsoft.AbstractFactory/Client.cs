@@ -4,19 +4,19 @@ internal class Client
 {
     public void Main()
     {
-        ClientMethod(new FabricaGG());
+        ClientMethod(new FabricaGg());
     }
 
-    public void ClientMethod(FabricaArmas fabrica)
+    public void ClientMethod(IFabricaArmas fabrica)
     {
         var prodA = fabrica.CriarAssaultRifle();
 
-        Console.WriteLine(prodA.exibirInfoAssaultRifle());
+        Console.WriteLine(prodA.ExibirInfoAssaultRifle());
         Console.WriteLine();
 
         var prodB = fabrica.CriarPistola();
 
-        Console.WriteLine(prodB.exibirInfoPistola());
+        Console.WriteLine(prodB.ExibirInfoPistola());
         Console.WriteLine();
     }
 }
