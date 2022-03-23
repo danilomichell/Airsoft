@@ -1,8 +1,8 @@
 ﻿namespace Airsoft.Singleton;
-
-internal class AluguelAirsoft
+#nullable disable
+public class AluguelAirsoft
 {
-    public static AluguelAirsoft instancia;
+    private static AluguelAirsoft _instancia;
 
     protected AluguelAirsoft()
     {
@@ -30,21 +30,20 @@ internal class AluguelAirsoft
 
     public static AluguelAirsoft GetInstancia()
     {
-        if (instancia == null) instancia = new AluguelAirsoft();
-        return instancia;
+        return _instancia ??= new AluguelAirsoft();
     }
 
-    public AluguelAirsoft criarAluguelFuzil()
+    public AluguelAirsoft CriarAluguelFuzil()
     {
         return new AluguelAirsoft("Fuzil MPW 12", 2019, 50F, "G&G", "Tawian", "Fuzil assalto", 70);
     }
 
-    public AluguelAirsoft criarAluguelPistolal()
+    public AluguelAirsoft CriarAluguelPistolal()
     {
         return new AluguelAirsoft("1911", 1911, 35.5F, "Amorer Works", "U.S.A", "Pistola", 30);
     }
 
-    public AluguelAirsoft criarAluguelFuzilPrecisao()
+    public AluguelAirsoft CriarAluguelFuzilPrecisao()
     {
         return new AluguelAirsoft("M110", 2008, 80F, "Knight's Armament Company", "U.S.A", "D.M.R", 100);
     }
