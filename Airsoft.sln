@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Singleton", "Airsof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Composite", "Airsoft.Composite\Airsoft.Composite.csproj", "{F6EE3610-1AD2-4F05-A00B-E068759F4C05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airsoft.Brigde", "Airsoft.Brigde\Airsoft.Brigde.csproj", "{064EC3AD-3062-43A1-849C-4B7E68795794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Bridge", "Airsoft.Brigde\Airsoft.Bridge.csproj", "{064EC3AD-3062-43A1-849C-4B7E68795794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS8618
-using Airsoft.Bridge.Fabricas;
-using Airsoft.Brigde.Armas;
+﻿using Airsoft.Bridge.Fabricas;
 
 namespace Airsoft.Bridge.Armas;
 

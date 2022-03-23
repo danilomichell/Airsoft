@@ -1,4 +1,4 @@
-﻿namespace Airsoft.Brigde.Armas;
+﻿namespace Airsoft.Bridge.Armas;
 
 public interface IArmas
 {

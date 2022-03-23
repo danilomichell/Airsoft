@@ -1,7 +1,7 @@
 ﻿using Airsoft.Bridge.Armas;
 using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Bridge.ArmasEnidades;
+namespace Airsoft.Bridge.ArmasEntidades;
 
 internal class M4A1 : Rifle
 {

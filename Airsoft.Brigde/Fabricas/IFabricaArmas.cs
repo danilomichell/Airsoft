@@ -1,7 +1,6 @@
 ﻿using Airsoft.Bridge.Armas;
-using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Brigde.Fabricas;
+namespace Airsoft.Bridge.Fabricas;
 
 public interface IFabricaArmas
 {

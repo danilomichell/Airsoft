@@ -1,11 +1,11 @@
 ﻿using Airsoft.Bridge.Armas;
 using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Bridge.ArmasEnidades;
+namespace Airsoft.Bridge.ArmasEntidades;
 
-public class CM16 : AssaultRifle
+public class Cm16 : AssaultRifle
 {
-    public CM16(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo, fabrica,
+    public Cm16(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo, fabrica,
         preco, ano)
     {
     }

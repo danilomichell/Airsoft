@@ -1,11 +1,11 @@
 ﻿using Airsoft.Bridge.Armas;
 using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Bridge.ArmasEnidades;
+namespace Airsoft.Bridge.ArmasEntidades;
 
-public class GTP9 : Pistola
+public class Gtp9 : Pistola
 {
-    public GTP9(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo, fabrica,
+    public Gtp9(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo, fabrica,
         preco, ano)
     {
     }

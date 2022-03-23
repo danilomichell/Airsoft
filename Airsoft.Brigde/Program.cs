@@ -1,9 +1,3 @@
-﻿namespace Airsoft.Bridge;
+﻿using Airsoft.Bridge;
 
-internal class Program
-{
-    private static void Main()
-    {
-        new Client().Main();
-    }
-}
+new Client().Main();
