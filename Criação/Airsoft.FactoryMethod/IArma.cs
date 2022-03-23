@@ -2,5 +2,5 @@
 
 public interface IArma
 {
-    string exibirInfo();
+    string ExibirInfo();
 }
