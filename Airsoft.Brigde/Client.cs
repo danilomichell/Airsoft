@@ -1,29 +1,26 @@
 ﻿using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Bridge
+namespace Airsoft.Bridge;
+
+internal class Client
 {
-    class Client
+    public void Main()
     {
-        public void Main()
-        {
-            ClientMethod(new FabricaArmas());
-        }
+        ClientMethod(new FabricaArmas());
+    }
 
-        public void ClientMethod(FabricaArmas fabrica)
-        {
+    public void ClientMethod(FabricaArmas fabrica)
+    {
+        var prodA = new FabricaArmas {Nome = "G&G"};
+        var pistola = prodA.CriarPistola("GTP9", "Pistola", prodA, 70, DateTime.Now);
 
-            var prodA = new FabricaArmas() {Nome = "G&G"};
-            var pistola = prodA.CriarPistola("GTP9", "Pistola", prodA, 70, DateTime.Now);
+        Console.WriteLine(pistola.ExibirInfo());
+        Console.WriteLine();
 
-            Console.WriteLine(pistola.ExibirInfo());
-            Console.WriteLine();
 
-            
-            var rifle = prodA.CriarRifle("GTP9", "Rifle", prodA, 70, DateTime.Now);       
+        var rifle = prodA.CriarRifle("GTP9", "Rifle", prodA, 70, DateTime.Now);
 
-            Console.WriteLine(rifle.ExibirInfo());
-            Console.WriteLine();
-
-        }
+        Console.WriteLine(rifle.ExibirInfo());
+        Console.WriteLine();
     }
 }

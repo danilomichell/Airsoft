@@ -1,10 +1,9 @@
-﻿namespace Airsoft.FactoryMethod
+﻿namespace Airsoft.FactoryMethod;
+
+public class FabricaGg : FabricaArma
 {
-    public class FabricaGg : FabricaArma
+    public override IArma CriarArma()
     {
-        public override IArma CriarArma()
-        {
-            return new Cm16();
-        }
+        return new Cm16();
     }
 }

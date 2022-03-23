@@ -1,30 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Airsoft.AbstractFactory;
 
-namespace Airsoft.AbstractFactory
+internal class Client
 {
-     class Client
+    public void Main()
     {
-        public void Main()
-        {
-            ClientMethod(new FabricaGG());
-        }
+        ClientMethod(new FabricaGG());
+    }
 
-        public void ClientMethod(FabricaArmas fabrica)
-        {
-            var prodA = fabrica.CriarAssaultRifle();
+    public void ClientMethod(FabricaArmas fabrica)
+    {
+        var prodA = fabrica.CriarAssaultRifle();
 
-            Console.WriteLine(prodA.exibirInfoAssaultRifle());
-            Console.WriteLine();
+        Console.WriteLine(prodA.exibirInfoAssaultRifle());
+        Console.WriteLine();
 
-            var prodB = fabrica.CriarPistola();
+        var prodB = fabrica.CriarPistola();
 
-            Console.WriteLine(prodB.exibirInfoPistola());
-            Console.WriteLine();
-
-        }
+        Console.WriteLine(prodB.exibirInfoPistola());
+        Console.WriteLine();
     }
 }

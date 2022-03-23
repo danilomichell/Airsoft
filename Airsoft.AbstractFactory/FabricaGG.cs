@@ -1,27 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Airsoft.AbstractFactory;
 
-
-namespace Airsoft.AbstractFactory
+public class FabricaGG : FabricaArmas
 {
-    public class FabricaGG : FabricaArmas
+    public Rifle CriarRifle()
     {
-        public Rifle CriarRifle()
-        {
-            return new M4A1();
-        }
+        return new M4A1();
+    }
 
-        public Pistola CriarPistola()
-        {
-            return new GTP9();
-        }
+    public Pistola CriarPistola()
+    {
+        return new GTP9();
+    }
 
-        public AssaultRifle CriarAssaultRifle()
-        {
-            return new CM16();
-        }
+    public AssaultRifle CriarAssaultRifle()
+    {
+        return new CM16();
     }
 }

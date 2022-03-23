@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Airsoft.AbstractFactory;
 
-namespace Airsoft.AbstractFactory
+public interface Pistola
 {
-    public interface Pistola
-    {
-        public string exibirInfoPistola();
-    }
+    public string exibirInfoPistola();
 }

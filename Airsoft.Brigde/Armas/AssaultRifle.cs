@@ -1,16 +1,11 @@
-﻿using  Airsoft.Bridge.Fabricas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Airsoft.Bridge.Fabricas;
 
-namespace Airsoft.Bridge.Armas
+namespace Airsoft.Bridge.Armas;
+
+public class AssaultRifle : Armas
 {
-    public class AssaultRifle : Armas
+    public AssaultRifle(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo,
+        fabrica, preco, ano)
     {
-        public AssaultRifle(string nome, string tipo, FabricaArmas fabrica, double preco, DateTime ano) : base(nome, tipo, fabrica, preco, ano)
-        {
-        }
     }
 }

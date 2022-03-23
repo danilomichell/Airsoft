@@ -1,7 +1,6 @@
-﻿namespace Airsoft.FactoryMethod
+﻿namespace Airsoft.FactoryMethod;
+
+public abstract class FabricaArma
 {
-    public abstract class FabricaArma
-    {
-        public abstract IArma CriarArma();
-    }
+    public abstract IArma CriarArma();
 }

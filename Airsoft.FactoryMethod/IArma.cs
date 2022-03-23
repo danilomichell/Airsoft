@@ -1,7 +1,6 @@
-﻿namespace Airsoft.FactoryMethod
+﻿namespace Airsoft.FactoryMethod;
+
+public interface IArma
 {
-    public interface IArma
-    {
-        string exibirInfo();
-    }
+    string exibirInfo();
 }
