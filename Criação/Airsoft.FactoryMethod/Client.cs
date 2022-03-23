@@ -12,6 +12,6 @@ public class Client
     public void ClientMethod(FabricaArma fabrica)
     {
         var arma = fabrica.CriarArma();
-        Console.WriteLine(arma.exibirInfo());
+        Console.WriteLine(arma.ExibirInfo());
     }
 }
