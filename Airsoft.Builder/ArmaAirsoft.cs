@@ -1,5 +1,5 @@
 ﻿namespace Airsoft.Builder;
-
+#nullable disable
 internal class ArmaAirsoft
 {
     public string Nome { get; set; }

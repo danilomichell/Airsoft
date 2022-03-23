@@ -1,15 +1,9 @@
-﻿namespace Airsoft.Builder;
+﻿using Airsoft.Builder;
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        var diretor = new ArmaDirector();
+var diretor = new ArmaDirector();
 
-        var builder1 = new ArmaBuilder();
+var builder1 = new ArmaBuilder();
 
-        //diretor.Construct(builder1, "MPW 12", 2019, 100, "G&G", "EUA","Fuzil assalto",50);
-        diretor.FuzilConstruct(builder1);
-        Console.WriteLine(diretor.returnAirsoft(builder1).Nome);
-    }
-}
+//diretor.Construct(builder1, "MPW 12", 2019, 100, "G&G", "EUA","Fuzil assalto",50);
+diretor.FuzilConstruct(builder1);
+Console.WriteLine(diretor.ReturnAirsoft(builder1).Nome);

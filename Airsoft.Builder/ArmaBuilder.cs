@@ -2,22 +2,22 @@
 
 internal class ArmaBuilder : ArmaAbstractBuilder
 {
-    private readonly ArmaAirsoft armaAirsoft = new();
+    private readonly ArmaAirsoft _armaAirsoft = new();
 
-    public override void addArma(string nome, int ano, float preco, string nomeFabricante, string pais, string tipo,
+    public override void AddArma(string nome, int ano, float preco, string nomeFabricante, string pais, string tipo,
         int distancia)
     {
-        armaAirsoft.Nome = nome;
-        armaAirsoft.Ano = ano;
-        armaAirsoft.Preco = preco;
-        armaAirsoft.NomeFabricante = nomeFabricante;
-        armaAirsoft.Pais = pais;
-        armaAirsoft.NomeTipo = tipo;
-        armaAirsoft.Distancia = distancia;
+        _armaAirsoft.Nome = nome;
+        _armaAirsoft.Ano = ano;
+        _armaAirsoft.Preco = preco;
+        _armaAirsoft.NomeFabricante = nomeFabricante;
+        _armaAirsoft.Pais = pais;
+        _armaAirsoft.NomeTipo = tipo;
+        _armaAirsoft.Distancia = distancia;
     }
 
     public override ArmaAirsoft GetAirsoft()
     {
-        return armaAirsoft;
+        return _armaAirsoft;
     }
 }
