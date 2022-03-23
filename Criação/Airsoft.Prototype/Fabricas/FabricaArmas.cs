@@ -1,4 +1,5 @@
 ﻿using Airsoft.Prototype.Interfaces;
+
 #nullable disable
 namespace Airsoft.Prototype.Fabricas;
 
