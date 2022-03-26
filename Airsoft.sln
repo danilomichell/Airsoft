@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.AbstractFactory", "Criação\Airsoft.AbstractFactory\Airsoft.AbstractFactory.csproj", "{64EBB5BE-C298-4A0A-8432-ECDC23305AFD}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comportamento", "Comportamento", "{34C2E259-21C2-434F-9E3E-7FEDFC075D07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airsoft.Command", "Airsoft.Command\Airsoft.Command.csproj", "{098844D2-AA84-4D95-BED8-638B472C9BBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airsoft.Facade", "Airsoft.Facade\Airsoft.Facade.csproj", "{276502A7-D6AA-4E44-9ED7-F979809BAB56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{CB9A817B-FB5B-40FA-958F-AC2EA517CF4F} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
 		{E2332BB0-6E98-4D3C-9B46-943713CD16D0} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
 		{098844D2-AA84-4D95-BED8-638B472C9BBE} = {34C2E259-21C2-434F-9E3E-7FEDFC075D07}
+		{276502A7-D6AA-4E44-9ED7-F979809BAB56} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2159FA3B-519A-4617-8AC7-4BE146FC3F5C}
