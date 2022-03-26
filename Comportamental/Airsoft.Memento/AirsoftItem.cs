@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Airsoft.Memento
 {
-    public class ArmaOriginadora
+    public class AirsoftItem
     {
-        public string Name { get; set; }
+        public string Nome { get; set; }
+        public string Ano { get; set; }
         public string Descricao { get; set;}
         public double Preco { get; set; }
         public string Fabricante { get; set; }
@@ -18,4 +19,5 @@ namespace Airsoft.Memento
         public int Distancia { get; set; }
 
     }
+
 }
