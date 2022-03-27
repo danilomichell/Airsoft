@@ -91,12 +91,13 @@ namespace Airsoft.Memento
             return new NotaMemento(pedido, Status, PrecoPedido);
         }
 
-        public void RetornarStatusAnterior(NotaMemento notaMemento)
+        public void RetornarNotaAnterior(NotaMemento notaMemento)
         {
             Console.WriteLine("Nota recuperada a partir do seu último salvamento.");
             pedido = notaMemento.RetornarListaAnterior();
             PrecoPedido = notaMemento.RetornarPrecoAnterior();
             Status = notaMemento.RetornarStatusAnterior();
         }
+
     }
 }
