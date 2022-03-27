@@ -1,16 +1,15 @@
 ﻿using Airsoft.Composite;
 using Airsoft.Composite.Armas;
 
-var aluguel = new NotaAluguel();
-var arma = new Arma();
+// Criando um alugel
+var aluguel1 = new NotaAluguel();
 
-var arma1 = arma.AdicionarRifle();
-var arma2 = arma.AdicionarPistola();
-var arma3 = arma.AdicionarSniper();
+//Adicionando uma airsoft na nota do aluguel
+aluguel1.CriarNota(1,1,true, true , true, 2);
+aluguel1.CriarNota(2,3,false,false,false, 3);
 
-aluguel.AddItem(null!, arma1);
-aluguel.AddItem(aluguel.Primeiro!, arma2);
-aluguel.AddItem(aluguel.Primeiro!, arma3);
+//Exibindo o valor total do aluguel
+Console.WriteLine($"Total do aluguel: R$ {aluguel1.ValorTotal}");
 
-aluguel.RemoverItem(aluguel.Primeiro!, arma1);
-Console.WriteLine(aluguel.Primeiro!.Item!.Nome);
+//Imprindo a lista de produtos alugados
+aluguel1.Itens.ForEach(p => Console.WriteLine($"Armas alugadas: {p.Plataforma.Nome}"));
