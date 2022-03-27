@@ -13,6 +13,7 @@ public class NotaAluguel
 {
     public List<Kit> Itens;
     public double ValorTotal { get; set; }
+    public bool StatusNota { get; set; }
 
     public NotaAluguel()
     {
@@ -44,5 +45,22 @@ public class NotaAluguel
 
         return Kit;
 
+    }
+
+    public void Pagamento(double valor)
+    {
+        if (valor == ValorTotal)
+        {
+            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
+            Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
+            StatusNota = true;
+        }
+        else if (valor > ValorTotal)
+        {
+            double troco = valor - ValorTotal;
+            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
+            Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
+            StatusNota = true;
+        }
     }
 }
