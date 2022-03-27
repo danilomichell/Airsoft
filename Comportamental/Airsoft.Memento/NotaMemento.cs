@@ -10,12 +10,12 @@ namespace Airsoft.Memento
     {
         public NotaMemento(List<AirsoftItem> pedido, bool status, double precoPedido)
         {
-            this.pedido = pedido;
+            this.Pedido = pedido;
             Status = status;
             PrecoPedido = precoPedido;
         }
 
-        public List<AirsoftItem> pedido;
+        public List<AirsoftItem> Pedido;
         public bool Status { get; set; }
         public double PrecoPedido { get; set; }
 
@@ -25,7 +25,7 @@ namespace Airsoft.Memento
         }
         public List<AirsoftItem> RetornarListaAnterior()
         {
-            return pedido;
+            return Pedido;
         }
         public double RetornarPrecoAnterior()
         {

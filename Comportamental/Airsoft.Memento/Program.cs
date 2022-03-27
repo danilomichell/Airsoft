@@ -27,3 +27,7 @@ else
 {
     Console.WriteLine("Em aberto");
 }
+
+//Itens alugados
+Console.WriteLine("Itens alugados:");
+nota1.pedido.ForEach(p => Console.WriteLine(p.Nome));

@@ -9,13 +9,17 @@ namespace Airsoft.Memento
 {
     public class NotaAluguel
     {
-        public List<AirsoftItem> pedido;
+        public List<AirsoftItem> Pedido;
         public bool Status { get; set; }
         public double PrecoPedido { get; set; }
 
+        public NotaAluguel()
+        {
+            Pedido = new List<AirsoftItem>();
+        }
+
         public void AddAirsoftNota(int tipoAirsoft)
         {
-            var airsoftsPedido = new List<AirsoftItem>();
             switch (tipoAirsoft) { 
 
                 case 1:
@@ -30,7 +34,7 @@ namespace Airsoft.Memento
                         Distancia = 30
                     };
                     PrecoPedido += pistola.Preco;
-                    airsoftsPedido.Add(pistola);
+                    Pedido.Add(pistola);
                     Console.WriteLine($"{pistola.Tipo} {pistola.Nome} de airsoft adicionado ao pedido.");
                     break;
 
@@ -46,7 +50,7 @@ namespace Airsoft.Memento
                         Distancia = 60
                     };
                     PrecoPedido += rifle.Preco;
-                    airsoftsPedido.Add(rifle);
+                    Pedido.Add(rifle);
                     Console.WriteLine($"{rifle.Tipo} {rifle.Nome} de airsoft adicionado ao pedido.");
                     break;
 
@@ -62,7 +66,7 @@ namespace Airsoft.Memento
                         Distancia = 100
                     };
                     PrecoPedido += sniper.Preco;
-                    airsoftsPedido.Add(sniper);
+                    Pedido.Add(sniper);
                     Console.WriteLine($"{sniper.Tipo} {sniper.Nome} de airsoft adicionado ao pedido.");
                     break;
             }
@@ -88,13 +92,13 @@ namespace Airsoft.Memento
         public NotaMemento CriarMemento()
         {
             Console.WriteLine("Nota salva!");
-            return new NotaMemento(pedido, Status, PrecoPedido);
+            return new NotaMemento(Pedido, Status, PrecoPedido);
         }
 
         public void RetornarNotaAnterior(NotaMemento notaMemento)
         {
             Console.WriteLine("Nota recuperada a partir do seu último salvamento.");
-            pedido = notaMemento.RetornarListaAnterior();
+            Pedido = notaMemento.RetornarListaAnterior();
             PrecoPedido = notaMemento.RetornarPrecoAnterior();
             Status = notaMemento.RetornarStatusAnterior();
         }
