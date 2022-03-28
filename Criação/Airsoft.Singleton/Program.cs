@@ -2,10 +2,12 @@
 
 var aluguel = AluguelAirsoft.GetInstancia();
 
-var aluguel1 = aluguel.CriarAluguelFuzil();
-var aluguel2 = aluguel.CriarAluguelPistolal();
-var aluguel3 = aluguel.CriarAluguelFuzilPrecisao();
+aluguel.CriarAluguelFuzil();
+aluguel.CriarAluguelPistolal();
 
-aluguel.ArmasAlugadas(aluguel1);
-aluguel.ArmasAlugadas(aluguel2);
-aluguel.ArmasAlugadas(aluguel3);
+//Retornando itens alugados
+aluguel.Itens.ForEach(i => aluguel.ArmasAlugadas(i));
+//Retornando preço total do aluguel
+Console.WriteLine($"Valor total: {aluguel.PrecoAluguel}");
+//Função de pagamento
+aluguel.Pagamento(245.8);
