@@ -1,19 +1,18 @@
-ï»¿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.AbstractFactory", "CriaÃ§Ã£o\Airsoft.AbstractFactory\Airsoft.AbstractFactory.csproj", "{64EBB5BE-C298-4A0A-8432-ECDC23305AFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.AbstractFactory", "Criação\Airsoft.AbstractFactory\Airsoft.AbstractFactory.csproj", "{64EBB5BE-C298-4A0A-8432-ECDC23305AFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Builder", "CriaÃ§Ã£o\Airsoft.Builder\Airsoft.Builder.csproj", "{7BEC3EAB-6550-411A-B822-AE7924ABCDAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Builder", "Criação\Airsoft.Builder\Airsoft.Builder.csproj", "{7BEC3EAB-6550-411A-B822-AE7924ABCDAF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.FactoryMethod", "CriaÃ§Ã£o\Airsoft.FactoryMethod\Airsoft.FactoryMethod.csproj", "{C2DF7357-FC04-4942-A5A3-475790735FA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.FactoryMethod", "Criação\Airsoft.FactoryMethod\Airsoft.FactoryMethod.csproj", "{C2DF7357-FC04-4942-A5A3-475790735FA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Prototype", "CriaÃ§Ã£o\Airsoft.Prototype\Airsoft.Prototype.csproj", "{D2736F43-E1DC-4228-87D2-C284981C6FF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Prototype", "Criação\Airsoft.Prototype\Airsoft.Prototype.csproj", "{D2736F43-E1DC-4228-87D2-C284981C6FF1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Singleton", "CriaÃ§Ã£o\Airsoft.Singleton\Airsoft.Singleton.csproj", "{112E8AF4-3EAD-4FE5-8881-9555DA79EAB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Singleton", "Criação\Airsoft.Singleton\Airsoft.Singleton.csproj", "{112E8AF4-3EAD-4FE5-8881-9555DA79EAB5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CriaÃ§Ã£o", "CriaÃ§Ã£o", "{37D9018C-3382-49C1-9105-EF436259990C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Criação", "Criação", "{37D9018C-3382-49C1-9105-EF436259990C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Estrutural", "Estrutural", "{E98DD6F0-1500-4C99-85A7-86B2B96501AC}"
 EndProject
@@ -23,11 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Composite", "Estrut
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comportamento", "Comportamento", "{34C2E259-21C2-434F-9E3E-7FEDFC075D07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airsoft.Command", "Airsoft.Command\Airsoft.Command.csproj", "{098844D2-AA84-4D95-BED8-638B472C9BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Facade", "Estrutural\Airsoft.Facade\Airsoft.Facade.csproj", "{276502A7-D6AA-4E44-9ED7-F979809BAB56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Facade", "Airsoft.Facade\Airsoft.Facade.csproj", "{276502A7-D6AA-4E44-9ED7-F979809BAB56}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airsoft.Iterator", "Comportamental\Airsoft.Iterator\Airsoft.Iterator.csproj", "{AC45DDDE-4844-43B3-A4A8-4528D7893ADC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airsoft.Iterator", "Comportamental\Airsoft.Iterator\Airsoft.Iterator.csproj", "{AC45DDDE-4844-43B3-A4A8-4528D7893ADC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,10 +60,6 @@ Global
 		{E2332BB0-6E98-4D3C-9B46-943713CD16D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2332BB0-6E98-4D3C-9B46-943713CD16D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2332BB0-6E98-4D3C-9B46-943713CD16D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{098844D2-AA84-4D95-BED8-638B472C9BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{276502A7-D6AA-4E44-9ED7-F979809BAB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,7 +80,6 @@ Global
 		{112E8AF4-3EAD-4FE5-8881-9555DA79EAB5} = {37D9018C-3382-49C1-9105-EF436259990C}
 		{CB9A817B-FB5B-40FA-958F-AC2EA517CF4F} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
 		{E2332BB0-6E98-4D3C-9B46-943713CD16D0} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
-		{098844D2-AA84-4D95-BED8-638B472C9BBE} = {34C2E259-21C2-434F-9E3E-7FEDFC075D07}
 		{276502A7-D6AA-4E44-9ED7-F979809BAB56} = {E98DD6F0-1500-4C99-85A7-86B2B96501AC}
 		{AC45DDDE-4844-43B3-A4A8-4528D7893ADC} = {34C2E259-21C2-434F-9E3E-7FEDFC075D07}
 	EndGlobalSection
