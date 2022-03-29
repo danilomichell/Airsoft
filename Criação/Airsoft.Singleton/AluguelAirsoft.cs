@@ -39,14 +39,14 @@ public class AluguelAirsoft
 
     public void CriarAluguelFuzil()
     {
-        var airsoft = new AluguelAirsoft("Fuzil MPW 12", 2019, 50.98, "G&G", "Tawian", "Fuzil assalto", 70);
+        var airsoft = new AluguelAirsoft("Fuzil MPW 12", 2019, 56.38, "G&G", "Tawian", "Fuzil assalto", 70);
         Itens.Add(airsoft);
         PrecoAluguel += airsoft.Preco;
     }
 
     public void CriarAluguelPistolal()
     {
-        var airsoft = new AluguelAirsoft("1911", 1911, 35.5, "Amorer Works", "U.S.A", "Pistola", 30);
+        var airsoft = new AluguelAirsoft("1911", 1911, 35.56, "Amorer Works", "U.S.A", "Pistola", 30);
         Itens.Add(airsoft);
         PrecoAluguel += airsoft.Preco;
     }
@@ -60,12 +60,12 @@ public class AluguelAirsoft
 
     public void ArmasAlugadas(AluguelAirsoft arma)
     {
-        Console.WriteLine($"Nome da airsoft: {arma.Nome}\nPreço: R${arma.Preco}");
+        Console.WriteLine($"Nome da airsoft: {arma.Nome}\nPreço: R${Math.Round(arma.Preco,2)}");
     }
 
     public void StatusNota()
     {
-        Console.WriteLine($"Total do aluguel: R${PrecoAluguel}");
+        Console.WriteLine($"Total do aluguel: R${Math.Round(PrecoAluguel,2)}");
         Console.Write($"Estado do alugel: ");
         if (StatusAluguel)
         {
@@ -78,20 +78,38 @@ public class AluguelAirsoft
     }
 
 
-    public void Pagamento(double valor)
+    public void Pagamento(int tipoOp,double valor,int dividir)
     {
-        if (valor == PrecoAluguel)
+        switch (tipoOp)
         {
-            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
-            Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
-            StatusAluguel = true;
-        }
-        else if (valor > PrecoAluguel)
-        {
-            double troco = valor - PrecoAluguel;
-            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
-            Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
-            StatusAluguel = true;
+            case 0:
+                if (valor == PrecoAluguel)
+                {
+                    Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(valor,2)}");
+                    Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
+                    StatusAluguel = true;
+                }
+                else if (valor > PrecoAluguel)
+                {
+                    double troco = valor - PrecoAluguel;
+                    Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(valor,2)}");
+                    Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
+                    StatusAluguel = true;
+                }
+                break;
+
+            case 1:
+                if (dividir > 5)
+                {
+                    Console.WriteLine("Quantidade de parcelas maior que o aceitável.");
+                }
+                else
+                {
+                    StatusAluguel = true;
+                    double valorParc = PrecoAluguel / dividir;
+                    Console.WriteLine($"Valor total: {Math.Round(PrecoAluguel, 2)} dividido para {dividir} vezes de R${Math.Round(valorParc,2)}");
+                }
+                break;
         }
     }
 }
