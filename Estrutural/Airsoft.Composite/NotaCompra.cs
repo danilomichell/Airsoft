@@ -47,20 +47,38 @@ public class NotaAluguel
 
     }
 
-    public void Pagamento(double valor)
+    public void Pagamento(int tipoOp, double valor, int dividir)
     {
-        if (valor == ValorTotal)
+        switch (tipoOp)
         {
-            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
-            Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
-            StatusNota = true;
-        }
-        else if (valor > ValorTotal)
-        {
-            double troco = valor - ValorTotal;
-            Console.WriteLine($"Valor recebido no pagamento: R$ {valor}");
-            Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
-            StatusNota = true;
+            case 0:
+                if (valor == ValorTotal)
+                {
+                    Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(valor, 2)}");
+                    Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
+                    StatusNota = true;
+                }
+                else if (valor > ValorTotal)
+                {
+                    double troco = valor - ValorTotal;
+                    Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(valor, 2)}");
+                    Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
+                    StatusNota = true;
+                }
+                break;
+
+            case 1:
+                if (dividir > 5)
+                {
+                    Console.WriteLine("Quantidade de parcelas maior que o aceitável.");
+                }
+                else
+                {
+                    StatusNota = true;
+                    double valorParc = ValorTotal / dividir;
+                    Console.WriteLine($"Valor total: {Math.Round(ValorTotal, 2)} dividido para {dividir} vezes de R${Math.Round(valorParc, 2)}");
+                }
+                break;
         }
     }
 }

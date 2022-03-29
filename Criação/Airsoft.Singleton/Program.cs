@@ -8,10 +8,10 @@ aluguel.CriarAluguelPistolal();
 //Retornando itens alugados
 aluguel.Itens.ForEach(i => aluguel.ArmasAlugadas(i));
 //Retornando iformações de pagamento
-Console.WriteLine("-------------------------------------");
+Console.WriteLine("--------------------------------------------------------------");
 aluguel.StatusNota();
 //Função de pagamento
-aluguel.Pagamento(245.8);
-Console.WriteLine("-------------------------------------");
+aluguel.Pagamento(1,245.8,3);
+Console.WriteLine("--------------------------------------------------------------");
 //Retornando status da nota
 aluguel.StatusNota();

@@ -21,4 +21,4 @@ diretor.Itens.ForEach(i => Console.WriteLine(i.Nome));
 Console.WriteLine($"Valor total: R$ {diretor.PrecoAluguel}");
 //Funçao de pagamento
 Console.WriteLine("Pagamento");
-diretor.Pagamento(200.00);
+diretor.Pagamento(0,200.00,0);
