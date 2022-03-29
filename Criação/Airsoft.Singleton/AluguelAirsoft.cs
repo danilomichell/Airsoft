@@ -28,9 +28,8 @@ public class AluguelAirsoft
     protected string Pais { get; set; }
     protected string NomeTipo { get; set; }
     protected int Distancia { get; set; }
-    public double PrecoAluguel { get; set; }
-    public bool StatusAluguel { get; set; }
-
+    protected double PrecoAluguel { get; set; }
+    protected bool StatusAluguel { get; set; }
     public List<AluguelAirsoft> Itens;
 
     public static AluguelAirsoft GetInstancia()
@@ -63,6 +62,21 @@ public class AluguelAirsoft
     {
         Console.WriteLine($"Nome da airsoft: {arma.Nome}\nPreço: R${arma.Preco}");
     }
+
+    public void StatusNota()
+    {
+        Console.WriteLine($"Total do aluguel: R${PrecoAluguel}");
+        Console.Write($"Estado do alugel: ");
+        if (StatusAluguel)
+        {
+            Console.WriteLine("Pago!");
+        }
+        else
+        {
+            Console.WriteLine("Em aberto!");
+        }
+    }
+
 
     public void Pagamento(double valor)
     {
