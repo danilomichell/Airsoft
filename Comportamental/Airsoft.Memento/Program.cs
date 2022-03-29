@@ -19,15 +19,9 @@ nota1.RetornarNotaAnterior(NotaSalva);
 Console.WriteLine(nota1.PrecoPedido);
 
 //Testando método de pagamento
-nota1.Pagamento(1000.0);
-if (nota1.Status){
-    Console.WriteLine("Pago");
-}
-else
-{
-    Console.WriteLine("Em aberto");
-}
+//(0 - pagamento avista/ 1 - pagamento parcelado || valor caso seja pagamento a vista - pagamento prcelado bota 0 || quantidade de vezes - pagamento a vista bota 0)
+nota1.Pagamento(1,0,4);
 
 //Itens alugados
 Console.WriteLine("Itens alugados:");
-nota1.pedido.ForEach(p => Console.WriteLine(p.Nome));
+nota1.Pedido.ForEach(p => Console.WriteLine(p.Nome));

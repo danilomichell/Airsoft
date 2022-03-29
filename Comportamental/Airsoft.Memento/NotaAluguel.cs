@@ -72,21 +72,39 @@ namespace Airsoft.Memento
             }
         }
 
-        public bool Pagamento(double pagamento)
+        public void Pagamento(int tipoOp,double pagamento,int dividir)
         {
-            if (pagamento == PrecoPedido)
+            switch (tipoOp)
             {
-                Status = true;
-                Console.WriteLine("A nota foi paga na totalidade e não terá troco.");
-            }
-            else if (pagamento > PrecoPedido)
-            {
-                Status = true;
-                var troco = pagamento - PrecoPedido;
-                Console.WriteLine($"A nota foi paga na totalidade e o troco será de R${troco}.");
-            }
+                case 0:
+                    if (pagamento == PrecoPedido)
+                    {
+                        Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(pagamento, 2)}");
+                        Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
+                        Status = true;
+                    }
+                    else if (pagamento > PrecoPedido)
+                    {
+                        double troco = pagamento - PrecoPedido;
+                        Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(pagamento, 2)}");
+                        Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
+                        Status = true;
+                    }
+                    break;
 
-            return Status;
+                case 1:
+                    if (dividir > 5)
+                    {
+                        Console.WriteLine("Quantidade de parcelas maior que o aceitável.");
+                    }
+                    else
+                    {
+                        Status = true;
+                        double valorParc = PrecoPedido / dividir;
+                        Console.WriteLine($"Valor total: {Math.Round(PrecoPedido, 2)} dividido para {dividir} vezes de R${Math.Round(valorParc,2)}");
+                    }
+                    break;
+            }
         }
 
         public NotaMemento CriarMemento()
