@@ -24,5 +24,10 @@
             alugar += _rifle.AlugarRifle();
             return alugar;
         }
+
+        public string PrecoPistolaComRifle()
+        {
+            return $"O preço do aluguel de um kit pitola e rifle juntos é R${_pistola.RetornarPreco() + _rifle.RetornarPreco()}";
+        }
     }
 }

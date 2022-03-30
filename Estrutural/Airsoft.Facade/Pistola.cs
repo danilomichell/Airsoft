@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Airsoft.Facade
+﻿namespace Airsoft.Facade
 {
     public class Pistola
     {
+        public double Preco { get; set; } = 34.5;
         public string AlugarPistola()
         {
             return "pistola alugada";
+        }
+
+        public double RetornarPreco()
+        {
+            return Preco;
         }
     }
 }
