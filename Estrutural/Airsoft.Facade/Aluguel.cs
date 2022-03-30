@@ -11,6 +11,7 @@ namespace Airsoft.Facade
         protected Pistola _pistola;
         protected Rifle _rifle;
         protected AssaultRifle _ar;
+        public double ValorTotal { get; set; }
 
         public Aluguel(Pistola pistola, Rifle rifle, AssaultRifle ar)
         {

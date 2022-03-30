@@ -7,6 +7,7 @@ public class AluguelAirsoft
     protected AluguelAirsoft()
     {
         Itens = new List<AluguelAirsoft>();
+        DiaAluguel = DateTime.Now;
     }
 
     public AluguelAirsoft(string nomeArma, int ano, double preco, string nomeFabri, string pais, string nomeTipo,
@@ -30,7 +31,10 @@ public class AluguelAirsoft
     protected int Distancia { get; set; }
     protected double PrecoAluguel { get; set; }
     protected bool StatusAluguel { get; set; }
+
     public List<AluguelAirsoft> Itens;
+
+    public DateTime DiaAluguel;
 
     public static AluguelAirsoft GetInstancia()
     {
@@ -65,6 +69,7 @@ public class AluguelAirsoft
 
     public void StatusNota()
     {
+        Console.WriteLine($"Data do aluguel: {DiaAluguel}");
         Console.WriteLine($"Total do aluguel: R${Math.Round(PrecoAluguel,2)}");
         Console.Write($"Estado do alugel: ");
         if (StatusAluguel)

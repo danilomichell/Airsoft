@@ -78,7 +78,7 @@ public class NotaAluguel
                 {
                     StatusNota = true;
                     double valorParc = ValorTotal / dividir;
-                    Console.WriteLine($"Valor total: {Math.Round(ValorTotal, 2)} dividido para {dividir} vezes de R${Math.Round(valorParc, 2)}");
+                    Console.WriteLine($"Valor total: R${Math.Round(ValorTotal, 2)} dividido para {dividir} vezes de R${Math.Round(valorParc, 2)}");
                 }
                 break;
         }
