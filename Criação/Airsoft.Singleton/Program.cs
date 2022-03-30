@@ -11,6 +11,7 @@ aluguel.Itens.ForEach(i => aluguel.ArmasAlugadas(i));
 Console.WriteLine("--------------------------------------------------------------");
 aluguel.StatusNota();
 //Função de pagamento
+Console.WriteLine();
 aluguel.Pagamento(1,245.8,3);
 Console.WriteLine("--------------------------------------------------------------");
 //Retornando status da nota

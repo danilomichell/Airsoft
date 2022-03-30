@@ -12,6 +12,7 @@ aluguel1.CriarNota(2,3,false,false,false, 3);
 aluguel1.Itens.ForEach(p => Console.WriteLine($"Armas alugadas: {p.Plataforma.Nome}"));
 Console.WriteLine($"Data: {aluguel1.DiaAluguel}");
 Console.WriteLine();
+
 //Exibindo o valor total do aluguel
 Console.WriteLine($"Total do aluguel: R$ {aluguel1.ValorTotal}");
 Console.WriteLine("------------------------------------------------------------");

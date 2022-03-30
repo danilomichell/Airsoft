@@ -5,6 +5,7 @@
         private readonly Pistola _pistola;
         private readonly Rifle _rifle;
         private readonly AssaultRifle _ar;
+        public double ValorTotal { get; set; }
 
         public Aluguel()
         {
