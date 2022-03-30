@@ -9,10 +9,12 @@ public class NotaAluguelDiretor
     public double PrecoAluguel { get; set; }
     public bool StatusNota  = false;
     public AirsoftBuilder Builder;
+    public DateTime DiaAluguel;
 
     public NotaAluguelDiretor()
     {
         Itens = new List<AirsoftItem>();
+        DiaAluguel = DateTime.Now;
     }
 
     public void AddItemLista()

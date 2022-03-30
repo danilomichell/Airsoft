@@ -17,8 +17,13 @@ diretor.AddItemLista();
 //Imprimindo lista de itens alugados
 Console.WriteLine("Lista de armas alugadas"); 
 diretor.Itens.ForEach(i => Console.WriteLine(i.Nome));
+Console.WriteLine();
+Console.WriteLine($"Data: {diretor.DiaAluguel}");
+
 //Imprimindo total do aluguel
 Console.WriteLine($"Valor total: R$ {diretor.PrecoAluguel}");
+Console.WriteLine();   
+
 //Funçao de pagamento
 Console.WriteLine("Pagamento");
 diretor.Pagamento(0,200.00,0);

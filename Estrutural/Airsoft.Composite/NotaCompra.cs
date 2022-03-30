@@ -14,6 +14,7 @@ public class NotaAluguel
     public List<Kit> Itens;
     public double ValorTotal { get; set; }
     public bool StatusNota { get; set; }
+    public DateTime DiaAluguel;
 
     public NotaAluguel()
     {
@@ -23,6 +24,7 @@ public class NotaAluguel
     public void CriarNota(int classe, int modelo, bool mira, bool silenciador, bool colete, int pistola)
     {
         Itens.Add(AddAirsoftNota(classe, modelo, mira, silenciador, colete, pistola));
+        DiaAluguel = DateTime.Now;
     }
 
     private Kit AddAirsoftNota(int classe, int modelo, bool mira, bool silenciador, bool colete, int pistola)
