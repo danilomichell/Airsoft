@@ -1,4 +1,6 @@
-﻿namespace Airsoft.FactoryMethod;
+﻿using Airsoft.FactoryMethod.Armas;
+
+namespace Airsoft.FactoryMethod.Fabricas;
 
 public class FabricaKnight : FabricaArma
 {

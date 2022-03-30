@@ -1,5 +1,6 @@
-﻿namespace Airsoft.FactoryMethod;
+﻿using Airsoft.FactoryMethod.Armas;
 
+namespace Airsoft.FactoryMethod.Fabricas;
 public class FabricaArmoredWorks : FabricaArma
 {
     public override IArma CriarArma()
