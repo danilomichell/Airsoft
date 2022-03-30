@@ -22,12 +22,14 @@
             alugar += _ar.AlugarAR();
             alugar += "\n";
             alugar += _rifle.AlugarRifle();
+            alugar += "\n";
+            alugar += $"Valor de R${_pistola.RetornarPreco() + _ar.RetornarPreco() + _rifle.RetornarPreco()}";
             return alugar;
         }
 
-        public string PrecoPistolaComRifle()
+        public string PrecoKit()
         {
-            return $"O preço do aluguel de um kit pitola e rifle juntos é R${_pistola.RetornarPreco() + _rifle.RetornarPreco()}";
+            return $"O preço do aluguel de um kit é R${_pistola.RetornarPreco() + _ar.RetornarPreco() + _rifle.RetornarPreco()}";
         }
     }
 }
