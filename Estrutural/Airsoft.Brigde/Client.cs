@@ -17,7 +17,6 @@ internal class Client
         Console.WriteLine(pistola.ExibirInfo());
         Console.WriteLine();
 
-
         var rifle = prodA.CriarRifle("GTP9", "Rifle", prodA, 70, DateTime.Now);
 
         Console.WriteLine(rifle.ExibirInfo());
