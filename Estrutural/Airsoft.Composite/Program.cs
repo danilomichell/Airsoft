@@ -4,7 +4,7 @@ using Airsoft.Composite.Armas;
 // Criando um alugel
 var aluguel1 = new NotaAluguel();
 
-//Adicionando uma airsoft na nota do aluguel
+//Adicionando uma airsoft na nota do aluguel - oredem do método: (classe de airsoft - modelo de airsoft - se vai ter mira - se vai ter colete - se vai ter ilenciador - modelo da pistola)
 aluguel1.CriarNota(1,1,true, true , true, 2);
 aluguel1.CriarNota(2,3,false,false,false, 3);
 
