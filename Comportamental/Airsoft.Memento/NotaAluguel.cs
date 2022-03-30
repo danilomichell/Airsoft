@@ -12,10 +12,14 @@ namespace Airsoft.Memento
         public List<AirsoftItem> Pedido;
         public bool Status { get; set; }
         public double PrecoPedido { get; set; }
+        public DateTime DiaAluguel;
+        public DateTime DiaPagamento;
+        public DateTime HorarioSalvamento;
 
         public NotaAluguel()
         {
             Pedido = new List<AirsoftItem>();
+            DiaAluguel = DateTime.Now;
         }
 
         public void AddAirsoftNota(int tipoAirsoft)
@@ -74,6 +78,7 @@ namespace Airsoft.Memento
 
         public void Pagamento(int tipoOp,double pagamento,int dividir)
         {
+            DiaPagamento = DateTime.Now;
             switch (tipoOp)
             {
                 case 0:
@@ -81,6 +86,7 @@ namespace Airsoft.Memento
                     {
                         Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(pagamento, 2)}");
                         Console.WriteLine("O aluguel foi pago na sua totalidade. Não precisará de troco.");
+                        Console.WriteLine($"Data pagamento: {DiaPagamento}");
                         Status = true;
                     }
                     else if (pagamento > PrecoPedido)
@@ -88,6 +94,7 @@ namespace Airsoft.Memento
                         double troco = pagamento - PrecoPedido;
                         Console.WriteLine($"Valor recebido no pagamento: R$ {Math.Round(pagamento, 2)}");
                         Console.WriteLine($"O aluguel foi pago na sua totalidade. O troco será de: R$ {troco}");
+                        Console.WriteLine($"Data pagamento: {DiaPagamento}");
                         Status = true;
                     }
                     break;
@@ -109,16 +116,18 @@ namespace Airsoft.Memento
 
         public NotaMemento CriarMemento()
         {
+            HorarioSalvamento = DateTime.Now;
             Console.WriteLine("Nota salva!");
-            return new NotaMemento(Pedido, Status, PrecoPedido);
+            return new NotaMemento(Pedido, Status, PrecoPedido, DiaAluguel);
         }
 
         public void RetornarNotaAnterior(NotaMemento notaMemento)
         {
-            Console.WriteLine("Nota recuperada a partir do seu último salvamento.");
+            Console.WriteLine($"Nota recuperada a partir do seu último salvamento feito em {HorarioSalvamento}.");
             Pedido = notaMemento.RetornarListaAnterior();
             PrecoPedido = notaMemento.RetornarPrecoAnterior();
             Status = notaMemento.RetornarStatusAnterior();
+            HorarioSalvamento = DateTime.Now;
         }
 
     }
