@@ -11,7 +11,7 @@ public class Client
 
     public void ClientMethod(FabricaArmas fabrica)
     {
-        var prodA = new FabricaArmas {Nome = "G&G"};
+        var prodA = new FabricaArmas { Nome = "G&G" };
         var pistola = FabricaArmas.CriarPistola("GTP9", prodA, 70, DateTime.Now);
 
         Console.WriteLine(pistola.ExibirInfo() + "\n");
@@ -20,7 +20,11 @@ public class Client
 
         Console.WriteLine(rifle.ExibirInfo() + "\n");
 
-        rifle.DeepCopy();
+        var rifleClone = rifle.DeepCopy();
+
+        rifleClone.Preco = 12;
+
+        Console.WriteLine(rifleClone.ExibirInfo() + "\n");
 
         var assaultRifle = FabricaArmas.CriarAssaultRifle("CM16", prodA, 70, DateTime.Now);
 

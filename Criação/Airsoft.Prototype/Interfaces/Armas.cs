@@ -33,6 +33,7 @@ public class Armas
 
     public Armas DeepCopy()
     {
+        Console.WriteLine("Aque está a copia(Deep): ");
         var clone = (Armas) MemberwiseClone();
         clone.Nome = Nome;
         clone.Tipo = Tipo;
