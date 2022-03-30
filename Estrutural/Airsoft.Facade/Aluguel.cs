@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Airsoft.Facade
+﻿namespace Airsoft.Facade
 {
-    class Aluguel
+    public class Aluguel
     {
-        protected Pistola _pistola;
-        protected Rifle _rifle;
-        protected AssaultRifle _ar;
+        private readonly Pistola _pistola;
+        private readonly Rifle _rifle;
+        private readonly AssaultRifle _ar;
 
-        public Aluguel(Pistola pistola, Rifle rifle, AssaultRifle ar)
+        public Aluguel()
         {
-            this._pistola = pistola;
-            this._rifle = rifle;
-            this._ar = ar;
+            _pistola = new Pistola();
+            _rifle = new Rifle();
+            _ar = new AssaultRifle();
         }
 
         public string AlugarArmas()
         {
-            string alugar = "armas alugadas: \n";
-            alugar += this._pistola.AlugarPistola();
+            var alugar = "armas alugadas: \n";
+            alugar += _pistola.AlugarPistola();
             alugar += "\n";
-            alugar += this._ar.AlugarAR();
+            alugar += _ar.AlugarAR();
+            alugar += "\n";
+            alugar += _rifle.AlugarRifle();
             return alugar;
         }
     }

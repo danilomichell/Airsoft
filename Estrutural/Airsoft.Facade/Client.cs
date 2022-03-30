@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Airsoft.Facade
+﻿namespace Airsoft.Facade
 {
-    class Client
+    public static class Client
     {
-        public static void ClientMethod(Aluguel facade)
+        public static void ClientMethod()
         {
+            var facade = new Aluguel();
             Console.WriteLine(facade.AlugarArmas());
         }
     }

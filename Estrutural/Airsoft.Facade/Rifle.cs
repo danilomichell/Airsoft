@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Airsoft.Facade
 {
-    class Rifle
+    public class Rifle
     {
         public string AlugarRifle()
         {
