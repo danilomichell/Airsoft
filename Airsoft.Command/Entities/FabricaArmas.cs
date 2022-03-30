@@ -3,6 +3,7 @@ using Airsoft.Command.Entities.Armas;
 
 namespace Airsoft.Command.Entities
 {
+#pragma warning disable CS8618
     public class FabricaArmas
     {
         public string Nome { get; set; }

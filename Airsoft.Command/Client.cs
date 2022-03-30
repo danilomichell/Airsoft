@@ -9,7 +9,7 @@ internal class Client
         ClientMethod(new FabricaArmas());
     }
 
-    public void ClientMethod(FabricaArmas fabrica)
+    public static void ClientMethod(FabricaArmas fabrica)
     {
         var prodA = new FabricaArmas {Nome = "G&G"};
         var pistola = prodA.CriarPistola("GTP9", "Pistola", prodA, 70, 1998);
